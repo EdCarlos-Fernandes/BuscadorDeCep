@@ -50,8 +50,13 @@ let btnRemover = document.getElementById("btn-remover");
 
 
 btnCep.addEventListener("click", (evt) => {
+    let cep = document.getElementById("cep").value;
     evt.preventDefault();
-    return pesquisacep(document.getElementById("cep").value)
+    if (cep !== "") {
+        return pesquisacep(document.getElementById("cep").value)
+    } else {
+        alert("Digite um CEP para pesquisar")
+    }
 })
 
 btnRemover.addEventListener("click", (evt) => {
